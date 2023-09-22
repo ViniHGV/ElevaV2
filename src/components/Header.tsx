@@ -7,12 +7,12 @@ import { ModalRet } from "./Modal";
 
 export const Header = () => {
   return (
-    <div className="px-7 py-4 grid grid-cols-12">
+    <div className="lg:px-7 py-4 grid grid-cols-12">
       <Image
         alt=""
         src={logo}
         width={70}
-        className="rounded-full object-contain col-span-3"
+        className="rounded-full object-contain ml-4 lg:ml-0 col-span-3"
       ></Image>
       <div className="col-span-6 flex items-center">
         <SerchBar />

@@ -5,6 +5,7 @@ import { Card } from "@/components/Card";
 import photoexample from "@/../public/composiçãoclassica.png";
 import { Separator } from "@/components/ui/separator";
 import { dataCard } from "../../../data/data";
+import { Footer } from "@/components/Footer";
 
 export default function Page() {
   return (
@@ -43,6 +44,8 @@ export default function Page() {
           </div>
         </div>
       </div>
+      <Separator />
+      <Footer />
     </div>
   );
 }
