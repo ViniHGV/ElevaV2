@@ -1,4 +1,5 @@
 import { StaticImageData } from "next/image";
+import { ReactNode } from "react";
 
 export interface Iinput {
   label?: string;
@@ -15,4 +16,16 @@ export interface ICard {
 export interface IModels {
   code: string;
   models: string;
+}
+
+export interface ICardRet {
+  children: ReactNode;
+  title: string;
+  description: string;
+  primaryButton: string;
+  secondaryButton: string;
+}
+
+export interface ICategories {
+  name: string;
 }

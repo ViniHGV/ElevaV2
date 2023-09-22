@@ -16,10 +16,10 @@ export default function Page() {
           <div className="w-full lg:border-lcol-span-3 lg:col-span-4">
             <div className="h-full space-y-1 px-4 py-6 lg:px-8">
               <div>
-                <h2 className="text-2xl font-semibold tracking-tight">
+                <h2 className="text-3xl lg:text-2xl font-semibold tracking-tight">
                   Produtos em Alta
                 </h2>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-md lg:text-sm text-muted-foreground">
                   Produtos em Alta
                 </p>
               </div>

@@ -1,4 +1,4 @@
-import { ICard } from "../interface/interface";
+import { ICard, ICategories } from "../interface/interface";
 import photoDefault from "../public/composiçãoclassica.png";
 import photoDefault2 from "../public/composiçãopulseira.png";
 import photoDefault3 from "../public/composiçãofé.png";
@@ -110,4 +110,10 @@ export const dataCard: ICard[] = [
       { code: "2.24515", models: "R$ 44,00" },
     ],
   },
+];
+
+export const dataCategories: ICategories[] = [
+  { name: "Pulseiras" },
+  { name: "Anéis" },
+  { name: "Brincos" },
 ];

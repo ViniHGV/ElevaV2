@@ -1,8 +1,11 @@
+"use client";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 import { ScrollArea } from "./ui/scroll-area";
+import { useState } from "react";
 
 export function Sidebar({ className }: any) {
+  const [category, setCategory] = useState("");
   return (
     <div className={cn("pb-12", className)}>
       <div className="space-y-4 py-4">
