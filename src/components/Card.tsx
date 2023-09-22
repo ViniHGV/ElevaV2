@@ -33,7 +33,7 @@ export const Card = ({ url, title, model }: ICard) => {
       </ContextMenu>
       <div className=" flex flex-col gap-2 py-2 text-sm">
         <div className="space-y-1">
-          <h2 className="lg:text-xl h-[30px] sm:h-auto lg:text-[16px] font-semibold leading-none">
+          <h2 className="xl:text-xl min-h-[30px] md:min-h-[20px] xl:min-h-[60px] lg:text-[16px] font-semibold leading-none">
             {title}
           </h2>
           <div className="space-y-1 min-h-[85px]">
