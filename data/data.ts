@@ -117,3 +117,10 @@ export const dataCategories: ICategories[] = [
   { name: "Anéis" },
   { name: "Brincos" },
 ];
+
+export const dataMateriais: ICategories[] = [
+  { name: "Ouro" },
+  { name: "Prata" },
+  { name: "Foleado a Ouro" },
+  { name: "Foleado a Prata" },
+];

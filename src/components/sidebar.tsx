@@ -3,9 +3,11 @@ import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 import { ScrollArea } from "./ui/scroll-area";
 import { useState } from "react";
+import { dataCategories, dataMateriais } from "../../data/data";
 
 export function Sidebar({ className }: any) {
   const [category, setCategory] = useState("");
+  const [materials, setMaterials] = useState("");
   return (
     <div className={cn("pb-12", className)}>
       <div className="space-y-4 py-4">
@@ -14,15 +16,18 @@ export function Sidebar({ className }: any) {
             Categorias
           </h2>
           <div className="space-y-1">
-            <Button variant="secondary" className="w-full justify-start ">
-              Pulseiras
-            </Button>
-            <Button variant="ghost" className="w-full justify-start">
-              Anéis
-            </Button>
-            <Button variant="ghost" className="w-full justify-start">
-              Brincos
-            </Button>
+            {dataCategories.map((data, index) => (
+              <Button
+                onClick={() => setCategory(data.name)}
+                key={index}
+                variant="secondary"
+                className={`bg-white shadow-none w-full justify-start ${
+                  data.name === category ? "bg-zinc-100" : "border-b-0"
+                } `}
+              >
+                {data.name}
+              </Button>
+            ))}
           </div>
         </div>
         <div className="px-3 py-2">
@@ -30,18 +35,18 @@ export function Sidebar({ className }: any) {
             Materiais
           </h2>
           <div className="space-y-1">
-            <Button variant="ghost" className="w-full justify-start">
-              Ouro
-            </Button>
-            <Button variant="ghost" className="w-full justify-start">
-              Prata
-            </Button>
-            <Button variant="ghost" className="w-full justify-start">
-              Foleado a Ouro
-            </Button>
-            <Button variant="ghost" className="w-full justify-start">
-              Foleado a Prata
-            </Button>
+            {dataMateriais.map((data, index) => (
+              <Button
+                onClick={() => setMaterials(data.name)}
+                key={index}
+                variant="secondary"
+                className={`bg-white shadow-none w-full justify-start ${
+                  data.name === materials ? "bg-zinc-100" : "border-b-0"
+                } `}
+              >
+                {data.name}
+              </Button>
+            ))}
           </div>
         </div>
       </div>
