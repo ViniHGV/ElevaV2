@@ -18,11 +18,17 @@ export function Sidebar({ className }: any) {
           <div className="space-y-1">
             {dataCategories.map((data, index) => (
               <Button
-                onClick={() => setCategory(data.name)}
+                onClick={() =>
+                  category == data.name
+                    ? setCategory("")
+                    : setCategory(data.name)
+                }
                 key={index}
                 variant="secondary"
-                className={`bg-white shadow-none w-full justify-start ${
-                  data.name === category ? "bg-zinc-100" : "border-b-0"
+                className={`bg-white shadow-none w-full justify-start transition-all ${
+                  data.name === category
+                    ? "bg-zinc-100 transition-all"
+                    : "bg-white transition-all"
                 } `}
               >
                 {data.name}

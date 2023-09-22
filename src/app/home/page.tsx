@@ -1,8 +1,7 @@
 import React from "react";
 import { Header } from "@/components/Header";
-import { Sidebar } from "@/components/sidebar";
+import { Sidebar } from "@/components/Sidebar";
 import { Card } from "@/components/Card";
-import photoexample from "@/../public/composiçãoclassica.png";
 import { Separator } from "@/components/ui/separator";
 import { dataCard } from "../../../data/data";
 import { Footer } from "@/components/Footer";
@@ -12,7 +11,7 @@ export default function Page() {
     <div>
       <Header />
       <div className="border-t">
-        <div className="grid lg:grid-cols-5">
+        <div className="grid lg:grid-cols-5 ">
           <Sidebar className="hidden lg:block" />
           <div className="w-full lg:border-lcol-span-3 lg:col-span-4">
             <div className="h-full space-y-1 px-4 py-6 lg:px-8">
