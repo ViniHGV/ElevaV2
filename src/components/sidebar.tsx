@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 import { useState } from "react";
 import { dataCategories, dataMateriais } from "../../data/data";
 
-export function Sidebar({ className }: any) {
+export const Sidebar = ({ className }: any) => {
   const [category, setCategory] = useState("");
   const [materials, setMaterials] = useState("");
   return (
@@ -57,4 +57,4 @@ export function Sidebar({ className }: any) {
       </div>
     </div>
   );
-}
+};

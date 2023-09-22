@@ -13,13 +13,13 @@ import { Button } from "@/components/ui/button";
 import { ICardRet } from "../../interface/interface";
 import Link from "next/link";
 
-export function ModalRet({
+export const ModalRet = ({
   children,
   title,
   description,
   primaryButton,
   secondaryButton,
-}: ICardRet) {
+}: ICardRet) => {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
@@ -46,4 +46,4 @@ export function ModalRet({
       </AlertDialogContent>
     </AlertDialog>
   );
-}
+};
