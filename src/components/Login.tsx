@@ -8,9 +8,9 @@ import Link from "next/link";
 
 export const LoginComponent = () => {
   return (
-    <div className="grid grid-cols-2 h-screen w-screen">
-      <div className="flex flex-col items-center py-24 w-full">
-        <Image alt="" src={logo} className="rounded-full w-48"></Image>
+    <div className="grid grid-cols-1 lg:grid-cols-2 h-screen w-screen">
+      <div className="flex flex-col items-center px-10 justify-center lg:px-0 py-24 w-full">
+        <Image alt="" src={logo} className="rounded-full w-48" />
         <div className="w-full max-w-sm mt-10 space-y-4">
           <Input
             label="Endereço de E-mail"
@@ -27,7 +27,7 @@ export const LoginComponent = () => {
       </div>
       <Image
         src={imgLogin}
-        className="w-[50%] right-0 h-full absolute"
+        className="w-[50%] lg:block hidden right-0 h-full absolute"
         alt=""
       />
     </div>
