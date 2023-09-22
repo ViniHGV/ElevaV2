@@ -11,6 +11,7 @@ export interface ICard {
   url: string | StaticImageData;
   title: string;
   model: IModels[];
+  isOpen?: boolean;
 }
 
 export interface IModels {

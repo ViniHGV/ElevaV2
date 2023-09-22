@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { Header } from "@/components/Header";
 import { Sidebar } from "@/components/Sidebar";
 import { Card } from "@/components/Card";
@@ -28,7 +29,7 @@ export default function Page() {
                 className=" bg-zinc-200"
               />
               <div className="flex">
-                <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                   {dataCard.map((data, index) => (
                     <Card
                       key={index}
