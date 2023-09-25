@@ -15,7 +15,7 @@ import { ICard, IModels } from "../../interface/interface";
 import { Button } from "./ui/button";
 import { Separator } from "./ui/separator";
 
-export const Card = ({ url, title, model }: ICard) => {
+export const Card = ({ url, title, model, onClick }: ICard) => {
   return (
     <div className="cursor-pointer">
       <ContextMenu>

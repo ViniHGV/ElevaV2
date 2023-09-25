@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 import { useState } from "react";
 import { dataCategories, dataMateriais } from "../../data/data";
 
-export const Sidebar = ({ className }: any) => {
+export const Sidebar = ({ className, selected, setSelected }: any) => {
   const [category, setCategory] = useState("");
   const [materials, setMaterials] = useState("");
   return (
@@ -17,11 +17,13 @@ export const Sidebar = ({ className }: any) => {
           <div className="space-y-1">
             {dataCategories.map((data, index) => (
               <Button
-                onClick={() =>
+                onClick={() => {
                   category == data.name
                     ? setCategory("")
-                    : setCategory(data.name)
-                }
+                    : setCategory(data.name);
+
+                  setSelected(data.name);
+                }}
                 key={index}
                 variant="secondary"
                 className={`bg-white shadow-none w-full justify-start transition-all ${

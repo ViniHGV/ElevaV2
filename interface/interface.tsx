@@ -10,8 +10,11 @@ export interface Iinput {
 export interface ICard {
   url: string | StaticImageData;
   title: string;
+  category: string;
+  material: string;
   model: IModels[];
   isOpen?: boolean;
+  onClick?: () => void;
 }
 
 export interface IModels {
