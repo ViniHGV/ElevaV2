@@ -9,6 +9,7 @@ import { useState } from "react";
 
 export default function Page() {
   const [selected, setSelected] = useState("");
+  const [selectedMaterial, setSelectedMaterial] = useState("");
 
   console.log(selected);
   return (
@@ -20,6 +21,7 @@ export default function Page() {
             className="hidden lg:block"
             selected={selected}
             setSelected={(ev: string) => setSelected(ev)}
+            setSelectedMaterial={(ev: string) => setSelectedMaterial(ev)}
           />
           <div className="w-full lg:border-lcol-span-3 lg:col-span-4">
             <div className="h-full space-y-1 px-4 py-6 lg:px-8">
@@ -53,20 +55,44 @@ export default function Page() {
                     </>
                   ) : (
                     <>
-                      {" "}
-                      {dataCard
-                        .filter((data) => data.category === selected)
-                        .map((data, index) => (
-                          <Card
-                            onClick={() => setSelected(data.category)}
-                            category={data.category}
-                            material={data.material}
-                            key={index}
-                            model={data.model}
-                            title={data.title}
-                            url={data.url}
-                          />
-                        ))}
+                      {selectedMaterial === "" ? (
+                        <>
+                          {" "}
+                          {dataCard
+                            .filter((data) => data.category === selected)
+                            .map((data, index) => (
+                              <Card
+                                onClick={() => setSelected(data.category)}
+                                category={data.category}
+                                material={data.material}
+                                key={index}
+                                model={data.model}
+                                title={data.title}
+                                url={data.url}
+                              />
+                            ))}
+                        </>
+                      ) : (
+                        <>
+                          {" "}
+                          {dataCard
+                            .filter((data) => data.category === selected)
+                            .filter(
+                              (data) => data.material === selectedMaterial
+                            )
+                            .map((data, index) => (
+                              <Card
+                                onClick={() => setSelected(data.category)}
+                                category={data.category}
+                                material={data.material}
+                                key={index}
+                                model={data.model}
+                                title={data.title}
+                                url={data.url}
+                              />
+                            ))}
+                        </>
+                      )}
                     </>
                   )}
                 </div>
