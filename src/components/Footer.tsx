@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "@/../public/LogoEleva.jpg";
+import logo from "@/../public/LogoEleva.png";
 import Image from "next/image";
 
 export const Footer = () => {

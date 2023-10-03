@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import logo from "@/../public/LogoEleva.jpg";
+import logo from "@/../public/LogoEleva.png";
 import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai";
 import { SerchBar } from "./SerchBar";
 import { ModalRet } from "./Modal";
